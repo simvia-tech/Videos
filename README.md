@@ -18,13 +18,13 @@ Below are the links to our videos along with a brief description of each.
 First tutorial on the installation of salome_meca with WSL. In this video, we activate WSL on Windows, install the singularity software and its dependencies and download and run with singularity the salome_meca software.
 
 - Software: [code_aster](https://code-aster.org/spip.php?rubrique1), [salome_meca](https://www.salome-platform.org/?page_id=150)
-- In-depth breakdowns: [markdown file]([Tips & Tricks] Install Salome_Meca on Windows using WSL/Commands used in the video.md)
+- In-depth breakdowns: [[Tips & Tricks] Install Salome_Meca on Windows using WSL/Commands used in the video.md](https://github.com/simvia-tech/Videos/blob/main/%5BTips%20%26%20Tricks%5D%20Install%20Salome_Meca%20on%20Windows%20using%20WSL/Commands%20used%20in%20the%20video.md)
 
 ### [[Tips & Tricks] Run a test case with salome meca](https://www.youtube.com/watch?v=gp3PgDTOGUY)
 Learn how to open and run a test case of code_aster within salome_meca. There are many test case you can try, all of them are documented.
 
 - Software: [code_aster](https://code-aster.org/spip.php?rubrique1), [salome_meca](https://www.salome-platform.org/?page_id=150)
-- In-depth breakdowns: [markdown file]([Tips & Tricks] Run a test case with Salome meca/Additionnal details on the video.md)
+- In-depth breakdowns: [[Tips & Tricks] Run a test case with Salome meca/Additionnal details on the video.md](https://github.com/simvia-tech/Videos/blob/main/%5BTips%20%26%20Tricks%5D%20Run%20a%20test%20case%20with%20Salome%20meca/Additionnal%20details%20on%20the%20video.md)
 
 > *Note: Each video will be updated with additional content and resources here as we continue building this repository.*
 
