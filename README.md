@@ -49,5 +49,5 @@ If you would like to contribute or suggest improvements to this repository, feel
 If you have any questions or need further clarification on anything, feel free to reach out to me at:
 
 - YouTube: [Simvia-tech](https://www.youtube.com/@Simvia-tech)
-- LinkedIn: [simvia-tech]([https://twitter.com/your-twitter](https://www.linkedin.com/company/simvia-tech/))
+- LinkedIn: [simvia-tech](https://www.linkedin.com/company/simvia-tech/)
 - Email: [info@simvia.tech](mailto:info@simvia.tech)
