@@ -67,7 +67,7 @@ Then click OK twice. We have defined a linear $f(x)=x$ function for the variable
 
 Next, go to "DEFI_LIST_REEL," set the "DEBUT" (start) option to 0, select the INTERVALLE (steps) option, and click "Edit." Enter 1 under "Until" in the table, and set the Value to 2. Click OK twice. We’ve created a list of values from 0 to 1, consisting of three values: 0, 0.5, and 1.
 
-Finally, double-click on the "MECA_STATIQUE" result command in the Data Settings tab, and click on the "LIST_INST" option (it should be set to the list of real values we just created). Go to the EXCIT option and edit the mechanical CHARGE (load): activate the FONC_MULT option (it should also be set to the list of real values we just created). Now, the pressure will be applied progressively, with a scale factor equal to the instant (since we defined it linearly with 3 points, and chose P=100, at 0 there is no pressure, at 0.5 P=50, and at 1 P=100).
+Finally, double-click on the "MECA_STATIQUE" result command in the Data Settings tab, and click on the "LIST_INST" option (it should be set to the list of real values we just created). Go to the EXCIT option and edit the mechanical CHARGE (load): activate the FONC_MULT option (it should also be set to the function we just created). Now, the pressure will be applied progressively, with a scale factor equal to the instant (since we defined it linearly with 3 points, and chose P=100, at 0 there is no pressure, at 0.5 P=50, and at 1 P=100).
 
 ## Adding post-processing
 
