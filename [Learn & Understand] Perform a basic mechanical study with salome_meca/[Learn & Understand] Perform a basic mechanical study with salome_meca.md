@@ -9,7 +9,7 @@ This module is used to define the geometry of the structure as well as the geome
 You can find the documentation in the Help/User's Guide/Shaper module tab `[0:21s]`.
 
 ## Sketch and 3d tools
-Please note that there may be some differences between the video and the 2024 release of Salome_Meca. Click the sketch button to enter sketch mode. You can move the sketch toolbar by holding the left-click button on the left side of the sketch button and dragging it to any position you like.
+Please note that there may be some differences between the video and the 2024 release of Salome_Meca. Click the sketch button to enter sketch mode (be careful to click on the `create sketch` button, there is "sketch" written on the button. Do not click on the button called `sketch drawer` where there is just the logo). You can move the sketch toolbar by holding the left-click button on the left side of the sketch button and dragging it to any position you like.
 
 Next, select the active plane for your sketch by clicking on it `[0:29s]`. Use `ctrl + right-click` to rotate the view, and `ctrl + middle-click` to pan it. The sketch panel will show additional options for the active plane: “Set Plane View” will recenter the view, while the “Change Sketch Plane” option allows you to select a new active plane.
 
