@@ -36,7 +36,16 @@ In this video, you will learn the fundamentals of a standard mechanical study in
 -- Visualize the results with post-processing tools.
 
 - Software: [code_aster](https://code-aster.org/spip.php?rubrique1), [salome_meca](https://www.salome-platform.org/?page_id=150)
-- In-depth breakdowns: [[Learn & Understand] Perform a basic mechanical study with salome_meca/Additionnal details.md]([https://github.com/simvia-tech/Videos/blob/main/%5BTips%20%26%20Tricks%5D%20Run%20a%20test%20case%20with%20Salome%20meca/Additionnal%20details%20on%20the%20video.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Perform%20a%20basic%20mechanical%20study%20with%20salome_meca/%5BLearn%20%26%20Understand%5D%20Perform%20a%20basic%20mechanical%20study%20with%20salome_meca.md))
+- In-depth breakdowns: [[Learn & Understand] Perform a basic mechanical study with salome_meca/Additionnal details.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Perform%20a%20basic%20mechanical%20study%20with%20salome_meca/%5BLearn%20%26%20Understand%5D%20Perform%20a%20basic%20mechanical%20study%20with%20salome_meca.md)
+
+
+### [[Learn & Understand] Behind the scenes of salome_meca: scripting and files](https://www.youtube.com/watch?v=P9Tcn4K-XGQ)
+This video is a direct continuation of "[Learn & Understand] Perform a basic mechanical study with salome_meca." If you haven't seen it yet, you can watch it here: [Link to the video](https://www.youtube.com/watch?v=vjUMgDSKJjY) 
+
+In this video, we focus on the powerful Python scripting capabilities within salome_meca. We explain how to work with the dump file from the previous study, provide a complete overview of the generated files, their functions, and demonstrate how to use them to compile code_aster directly from the bash.
+
+- Software: [code_aster](https://code-aster.org/spip.php?rubrique1), [salome_meca](https://www.salome-platform.org/?page_id=150)
+- In-depth breakdowns: [[Learn & Understand] Behind the scenes of salome_meca: scripting and files/Additionnal details.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Behind%20the%20scenes%20of%20salome_meca%20scripting%20and%20files/Additionnal%20details)
 
 > *Note: Each video will be updated with additional content and resources here as we continue building this repository.*
 
