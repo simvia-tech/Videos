@@ -45,7 +45,7 @@ This video is a direct continuation of "[Learn & Understand] Perform a basic mec
 In this video, we focus on the powerful Python scripting capabilities within salome_meca. We explain how to work with the dump file from the previous study, provide a complete overview of the generated files, their functions, and demonstrate how to use them to compile code_aster directly from the bash.
 
 - Software: [code_aster](https://code-aster.org/spip.php?rubrique1), [salome_meca](https://www.salome-platform.org/?page_id=150)
-- In-depth breakdowns: [[Learn & Understand] Behind the scenes of salome_meca: scripting and files/Additionnal details.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Behind%20the%20scenes%20of%20salome_meca%20scripting%20and%20files/Additionnal%20details)
+- In-depth breakdowns: [[Learn & Understand] Behind the scenes of salome_meca: scripting and files/Additionnal details.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Behind%20the%20scenes%20of%20salome_meca%20scripting%20and%20files/Additionnal%20details.md)
 
 > *Note: Each video will be updated with additional content and resources here as we continue building this repository.*
 
