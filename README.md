@@ -83,3 +83,7 @@ If you have any questions or need further clarification on anything, feel free t
 - YouTube: [Simvia-tech](https://www.youtube.com/@Simvia-tech)
 - LinkedIn: [simvia-tech](https://www.linkedin.com/company/simvia-tech/)
 - Email: [info@simvia.tech](mailto:info@simvia.tech)
+
+## Acknowledgements
+
+An essential part of the videos on our YouTube channel was created in collaboration with our partners at [Phimeca](https://www.phimeca.com/en/).
