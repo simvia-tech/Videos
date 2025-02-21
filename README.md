@@ -17,7 +17,6 @@ Below are the links to our videos along with a brief description of each. The vi
 <details>
 <summary><h3> Tips & Tricks </h3></summary>
 
-
 ### [Install Salome_Meca on Windows using WSL](https://www.youtube.com/watch?v=dgr5NA9gd3A)
 First tutorial on the installation of salome_meca with WSL. In this video, we activate WSL on Windows, install the singularity software and its dependencies and download and run with singularity the salome_meca software.
 
@@ -30,23 +29,24 @@ Learn how to open and run a test case of code_aster within salome_meca. There ar
 - Software: [code_aster](https://code-aster.org/spip.php?rubrique1), [salome_meca](https://www.salome-platform.org/?page_id=150)
 - In-depth breakdowns: [[Tips & Tricks] Run a test case with Salome meca/Additionnal details on the video.md](https://github.com/simvia-tech/Videos/blob/main/%5BTips%20%26%20Tricks%5D%20Run%20a%20test%20case%20with%20Salome%20meca/Additionnal%20details%20on%20the%20video.md)
 
+### [How to install Docker on Windows and get started with code_saturne](TODO)
+In this tutorial, we walk you through the process of installing Docker on your Windows computer and guide you on how to download the
+Code_Saturne image directly from our DockerHub. You'll also learn the essential first commands to run Code_Saturne smoothly and get
+started with your simulations. Whether you're a beginner or looking to streamline your setup, this video makes the process quick and easy.
+
+- Software: [code_saturne](https://www.code-saturne.org/cms/web/)
+- In-depth breakdowns: [[Tips & Tricks] How to install Docker on Windows and get strated with Code_Saturne/Main steps.md](https://github.com/simvia-tech/Videos/blob/main/%5BTips%20%26%20Tricks%5D%20How%20to%20install%20Docker%20on%20Windows%20and%20get%20started%20with%20Code_Saturne/Main%20steps.md)
+
 </details>
 
 <details>
 <summary><h3> Learn & Understand </h3></summary>
 
 ### [Perform a basic mechanical study with salome_meca](https://www.youtube.com/watch?v=vjUMgDSKJjY)
-In this video, you will learn the fundamentals of a standard mechanical study in salome_meca: 
-
--- Create the geometry and groups with the sketch module.
--- Create a mesh for the geometry.
--- Read the mesh with Aster_Study and set up the model using the "isotropic linear elastic" assistant.
--- Run the simulation.
--- Visualize the results with post-processing tools.
+In this video, you will learn the fundamentals of a standard mechanical study in salome_meca: Create the geometry and groups with the sketch module | Create a mesh for the geometry | Read the mesh with Aster_Study and set up the model using the "isotropic linear elastic" assistant | Run the simulation | Visualize the results with post-processing tools
 
 - Software: [code_aster](https://code-aster.org/spip.php?rubrique1), [salome_meca](https://www.salome-platform.org/?page_id=150)
 - In-depth breakdowns: [[Learn & Understand] Perform a basic mechanical study with salome_meca/Additionnal details.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Perform%20a%20basic%20mechanical%20study%20with%20salome_meca/%5BLearn%20%26%20Understand%5D%20Perform%20a%20basic%20mechanical%20study%20with%20salome_meca.md)
-
 
 ### [Behind the scenes of salome_meca: scripting and files](https://www.youtube.com/watch?v=P9Tcn4K-XGQ)
 This video is a direct continuation of "[Learn & Understand] Perform a basic mechanical study with salome_meca." If you haven't seen it yet, you can watch it here: [Link to the video](https://www.youtube.com/watch?v=vjUMgDSKJjY) 
@@ -56,6 +56,15 @@ In this video, we focus on the powerful Python scripting capabilities within sal
 - Software: [code_aster](https://code-aster.org/spip.php?rubrique1), [salome_meca](https://www.salome-platform.org/?page_id=150)
 - In-depth breakdowns: [[Learn & Understand] Behind the scenes of salome_meca: scripting and files/Additionnal details.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Behind%20the%20scenes%20of%20salome_meca%20scripting%20and%20files/Additionnal%20details.md)
 
+### [Von Karman vortices Part 1 - Mesh & Geometry on Salome](TODO)
+In this two-part tutorial, we showcase the powerful capabilities of Salome and Code_Saturne by demonstrating their performance on the well-documented Von Karman vortex phenomenon.
+
+In Part 1, we guide you step-by-step through the creation of geometry and mesh, highlighting key tips and tricks in the Geom and Mesh modules. You'll also learn how easy it is to get started with the Docker version of Code_Saturne, which offers impressive performance with minimal installation effort..
+
+- Software: [salome]([https://www.salome-platform.org/?page_id=150](https://www.salome-platform.org/))
+- In-depth breakdowns: [[Learn & Understand] Von Karman vortices Part 1 - Mesh & Geometry on Salome
+/Details on each step.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Von%20Karman%20vortices%20Part%201%20-%20Mesh%20%26%20Geometry%20on%20Salome/Details%20on%20each%20step.md)
+  
 </details>
 
 > *Note: Each video will be updated with additional content and resources here as we continue building this repository.*
