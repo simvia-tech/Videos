@@ -1,4 +1,4 @@
-# Install Docker and pul Code_Saturne with WSL  
+# Install Docker and pull Code_Saturne with WSL  
 
 ## Prerequisites
 WSL is already present by default on Windows 10 for the 2004 version and onwards, or on Windows 11. If you have an older version, try a manual installation.
