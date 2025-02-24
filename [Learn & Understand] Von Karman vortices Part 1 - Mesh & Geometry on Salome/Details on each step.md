@@ -3,63 +3,54 @@
 ## Introduction
 
 This video is a direct follow-up to the previous one on how to install code_saturne with docker.
-If you haven't watched it already a link is there [link](link).
+If you haven't watched it already a link is there ([link](https://youtu.be/toaXeW8Wt94)).
 
 We are now going to use this docker installation of code_saturne to showcase a basic Von Karman
 Vortex study. We'll first use a docker image of salome to create the geometry and the mesh then
-move in the code_saturne docker and run the study. Finally I'll show you how to
-postprocess the results on par properly so first let's open salome with the docker container.
+move in the code_saturne docker and run the study. Finally we'll
+postprocess the results on paravis. In this first part of the tutorial, we focus solely on the 
+geometry and mesh creation on salome.
 
 ## Creating a geometry with GEOM
 
-### Simple plate
+### Simple quasi 2d plate
 
-For this video we're going to go into the geometry module. We'll start by creating a rectangle as
-we are going to do a 2d study. This rectangle will be a plate so we don't really care about the
-dimension along Z let's put it to 0.1. The other two dimensions are going to be 2.2 and 0.41.
-Let's apply and close.
+For this video we're going to go into the geometry module. For the sake of providing examples, we will create a quasi 2d plate (a thin rectangle), and refine the mesh using the submeshes feature. 
 
-### Small tips on Salome
+We'll start by creating a rectangle using the rectangle button `[0:43s]`. As this will be quasi 2d, we don't really care about the dimension along Z so we put it to 0.1. The other two dimensions are going to be 2.2 and 0.41. Let's apply and close.
 
-Now we don't really see the box so let's zoom a little bit. I remind you that if you want to zoom
-you can press control and left click and if you want to rotate you can press control and right
-click control and middle click will allow you to span in the 2D plane the picture.
+### Small tips on Salome `[1:04-1:18]`
 
-### Hole
+Now we don't really see the box so let's zoom a little bit. To do this, you can press control and left click. Similarly, if you want to rotate you can press control and right click. Finally, control and middle click will allow you to span in the 2D plane the picture.
 
-Now we are going to generate a cylinder that will act as our main obstacle. As a radius we'll put 0.05.
-We don't care about the height as it's going to be 2d at the end of the (set it to 1). Let's now translate this
-rectangle like that to put it in the middle of the plate. Apply. Now we're going to perform a cut with
-the following button. We'll select as the main object the box that is going to be the flow and as a tool
-object the translated cylinder. Let's apply and close. Now you see the cylinder disappeared and we have a hole
-where the cylinder was before.
+### Hole `[1:20-2:10]`
 
-## Creating the geometry groups with GEOM
+Now we are going to generate a cylinder that will act as our main obstacle `[1:25]`. As a radius we'll put 0.05.
+We don't care about the height as it's going to be 2d at the end of the (set it to 1). Let's now apply a translation of (Dx=0.2, DY=0.2, DZ=0) to put it in the middle of the plate `[1:38]`. Now we're going to perform a cut with
+the cut tool button `[1:48]`. We'll select as the main object the box that is going to be the flow and as a tool
+object the translated cylinder. You should see the cylinder disappeared and a hole in the plate where the cylinder was before `[2:04]`.
 
-### Partition
+### Partitioning the geometry `[2:17-5:41]`
 
-Now in order to make things easier for the meshing algorithm we're going to intersect this flow with some planes.
-Let us start by creating two points the first point is going to be at the following coordinates which corresponds
-roughly to the center of the obstacle. You can see it here. The second point
-is going to be at the following coordinates and you should see it here.
+In order to make things easier for the meshing algorithm we're going to intersect this flow with some planes (see the meshing section as for the why we do this).
 
-Now let's create the planes. Use this tool to generate planes. As a first plane you're going to select
-the point in the middle of the obstacle (vertex_1) and this vector along y. It will create you the first plane.
-We don't need it to be so big so put it to for instance to six but check that it's getting your whole geometry.
-Now you can press apply and we're going to generate other planes. The second
-planes is also going to go through the first point but this time it's going to be orthogonal to this vector. We don't need
-it to be so big again so you can put like 3, should be enough. Apply. Now the third plane is going to go through vertex_2
-and be orthogonal to this Vector. Apply. Now we're going to generate planes with three points. Let's move a little bit the
-view on this side. As the first point we're going to select the first vertex again but now as a second and third points we
-are selecting these two. We don't need this plane to be so big let's put it to six. Apply. And finally let's do the same on
-the other diagonal of the rectangle there. So the first point is going to be vertex one and the two other points are going
-to be this one and this one. Apply and close. So it looks messy but at the end of the day what you should observe if you're
-looking the thing from a top view by clicking on this button is that the plane should cut the mesh in this way. We are doing
-all of these planes in order to create a partition of the flow. Go to the partition tool and select as the object the cut
-and as a tool object select all of the planes we just created. Apply and close. Now you can see that the geometry for
-the flow has the obstacle but also some planes lines. They are going to be useful for the meshing algorithm later but
-before moving to the meshing algorithm we're going to create some geometric groups go in the menu. Rename the partition
-as flow as this is going to be the geometry of the flow.
+Let us start by creating 2 points. The first point called vertex_1 is going to be at (X=0.201, Y=0.201, Z=0.1) which corresponds roughly to the center of the obstacle `[2:28]`. The second point called vertex_2 is going to be at the following coordinates: (X=0.41, Y=0, Z=0.1) `[2:52]`. This point is placed here so that we can build a square centered on the hole.
+
+Now let's create the planes with the "create a plane" button `[3:00]`. As a first plane you're going to select
+the point in the middle of the obstacle (vertex_1) and a vector along y. It will create you a plane in the (x,z) plane intersecting vertex_1. You can reduce it size to 5 for instance, but make sure this plan is cutting the full plate in two parts `[3:25]`.
+The second plane is also going to go through the center of the hole (vertex_1) but this time it's going to be orthogonal to the x axis. We don't need it to be so big again so you can set its size to 5 again, this should be enough to cut the full plate `[3:44]`. 
+The third plane is going to go through vertex_2 and be orthogonal to the X axis, effectively cutting the plate as a square centered around the hole, and the rest of the rectangle `[3:58]`.
+
+Let us finally create the two planes along the diagonal of the square centered on the hole. To do this, we're going to generate planes with three points. As the first point we're going to select vertex_1 again but now as a second and third points we are selecting the two points on the edges of the plate `[4:14]`. Finally do the same on the other diagonal of the rectangle there `[4:34]`.
+
+The final product will look messy but if you're looking at it from a top view by clicking on the "view along the (x,y) plane button `[4:49]`, the planes should create a square centered on the hole and cut along its two diagonals `[4:52]`. 
+
+Let's finally make the partition of the flow. Go to the partition tool button `[4:59]` and select as the object the cut (holed plate) and as a tool objects select all of the planes we just created. Now you can see that the geometry for the flow has been cut by the planes we created `[5:20]`. 
+
+Before moving to the meshing algorithm we're going to create some geometric groups go in the menu. Rename the partition as flow as this is going to be the geometry of the flow.
+
+
+## Creating the geometry groups with GEOM `[5:41-8:51]`
 
 ### Groups
 
