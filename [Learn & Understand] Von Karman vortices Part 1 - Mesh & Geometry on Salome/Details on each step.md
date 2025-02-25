@@ -50,52 +50,45 @@ Let's finally make the partition of the flow. Go to the partition tool button `[
 Before moving to the meshing algorithm we're going to create some geometric groups go in the menu. Rename the partition as flow as this is going to be the geometry of the flow.
 
 
-## Creating the geometry groups with GEOM `[5:41-8:51]`
+## Creating the geometry groups with GEOM `[5:35-8:51]`
 
 ### Groups
 
-Now you can right click and select "create group". We are going
+Right click on the final geometry you just renamed flow, and select "create group". We are going
 to create several groups. Let's start with the inlet: this is where the water is going to come inside the mesh.
-Apply. Similarly we are going to create an outlet: this is where the water is going to leave the mesh after it flowed.
-We're selecting these two faces, let's add them and apply. Now we're going to create some symmetry groups: as the geometry
-is 2D we don't really care about these two faces so we're going to define them in Code_Saturne as symmetries. To select
-several faces this way you should press shift plus left click. Now go on the other side and pick all of the faces here
-too. Once you're done select add, you should get at the end 20 faces. If you did any mistakes like I did here and you
-want to add faces to (an already created) group you can click on the group and right click it. Go in edit group and
-then you can add the faces that you forgot to put. Like this ! Finally, we're going to create a last surface group
-that is going to be the walls of the flow. Select the sides. You should have six faces for the sides. Do not forget
-to now add the obstacle. Apply. Now finally we're going to create a 1D group made of all of the vertices that are
-along the z-axis. Let's name it Z vertices. This group is going to be useful when we'll be doing the mesh.
+Select a surface group `[5:38]` and call it "Inlet". Select the two faces on the side of the rectangle close to the hole `[5:49]`. You can select several faces at once by pressing shift and left click (and you can still rotate, zoom and span the interface using ctrl and the mouse buttons). Once you have selected the two faces composing the inlet, press add and click on apply to create the group without closing the create group pannel `[5:54]`. Similarly we are going to create an outlet: this is where the water is going to leave the mesh after it flowed. Name the new group "Outlet" and rotate the structure to select the two faces on the opposite side of the inlet, add them and press apply `[6:10]`.
+
+Now we're going to create the symmetry groups: as the geometry is quasi 2D we don't really care about the faces orthogonal to the z-axis so we're going to define them in Code_Saturne as symmetries. Call the group "Symmetry" and add all of the faces orthogonal to Z `[6:25-6:52]`. If everything was done as in the video you should get 20 faces. If you did any mistakes like in the video, you can right-click on the group and go in edit group. Then you can add the faces that you forgot to put `[6:58]`. Finally, we're going to create a last surface group that is going to be the walls of the flow. Select the sides (you should have six faces), and do not forget to add the obstacle `[7:16-7:38]`. 
+
+Lastly, we're going to create a 1D group made of all of the vertices that are along the z-axis. Let's name it Z vertices. This group is going to be useful when we'll be doing the mesh (cf later) `[7:40-7:56]`. Do likewise for the x-axis `[7:57-8:13]`.
  
-At the end of the day you should have the following groups the inlet, the outlet, the symmetry that are basically
-the planes orthogonal to Z and finally the walls. if you make everything else invisible the walls should just be the
-lateral side as well as the obstacle. And of course the 1D Z vertices group we just created.
+At the end of the day you should have the following groups: the inlet, the outlet, the symmetry that are basically the planes orthogonal to Z and finally the walls (lateral side + obstacle). And of course the 1D Z and X vertices group we just created `[8:20-8:44]`.
 
-## Creating a butterfly mesh with the MESH module
+## Creating a butterfly mesh with the MESH module `[8:49-9:54]`
 
-Now let's move to the mesh module we start by expanding the menu of flow, the geometry we just created,
-and we are going to select it and go on the create mesh button. As algorithm we're going to select the hexahedral algorithm.
+Now let's move to the mesh module. We start by expanding the menu of flow, the geometry we just created, and we are going to select it and click on the create mesh button `[8:52]`. The create mesh pannel should open, automatically selecting flow as a geometry. 
+
+As a 3D algorithm we're going to select the hexahedron (i,j,k) algorithm. Hexahedral mesh tends to perform better on turbulent CFD studies and should be used as much as possible.
 
 Then we'll move on to 2D and impose the quadrangle mapping algorithm so that we have quadrilateral elements on the surface.
-We create a new hypothesis quadrangle parameter and select "quadrangle preferences".
+We create a new hypothesis quadrangle parameter and select "quadrangle preferences". This asks the 2D algorithm to put as many quadrilateral elements as possible close to a transition where the domain's geometry doesn’t allow for a uniform quadrilateral mesh or a where smooth transition is needed to prevent large distortion of mesh elements `[9:12]`.
 
-Move into 1D and we're going to impose a wire discretization algorithm with the hypothesis "number of segments" set to 30.
+Move into 1D and we're going to impose a wire discretization algorithm with the hypothesis "number of segments" set to 30. This means that along each vertices of the mesh there will be 30 equidistants segments `[9:20]`.
+
 At this stage if you right click on the mesh you just created and go on compute you're going to see that you have a much
-finer mesh around the hole than elsewhere. Second thing you'll notice is in 3D along the z-axis you have much more elements
-than what you want. We need only one element along Z.
+finer mesh around the hole than elsewhere `[9:20]`. Second thing you'll notice is in 3D along the z-axis you have much more elements than what you want. We need only one element along Z.
 
 ## Refining the mesh by adding sub-meshes
 
-We are now going to create sub meshes to solve these issues. Right click on the mesh you just created and go on create submesh.
+We are now going to create sub meshes to solve these issues. Right click on the mesh you just created and go on create submesh `[9:50]`.
 Here we'll select the Z edges geometry group and impose a new 1D wire discretization algorithm. Go into hypothesis
-and create a new number of segment hypothesis and this time you can set it to one. This way, we'll impose only one
+and create a new number of segment hypothesis and this time you can set it to one `[10:10]`. This way, we'll impose only one
 element along the z-axis. You can clear and compute the mesh and as you can see now there is only one cell along the
-Z axis. Finally let's make a final mesh on this side of the geometry create a sub mesh and this time select the X edges
-group. Add another wire discretization algorithm and another set of hypothesis number of segments and put 160 segments.
-Press ok. apply and close. If we compute again the mesh we see that we have a finer mesh everywhere ! So butterfly meshing
-is not only necessary for the hexahedral algorithm but it is also a way of locally refining the mesh.
+Z axis `[10:21]`. 
 
-## Exporting the mesh as a .MED file
+The mesh remains not enough refined passed the hole, close to the outlet. Therefore, let's make a final mesh on this side using the x_vertices group created earlier. Add another wire discretization algorithm and another set of hypothesis number of segments and put 160 segments `[10:41]`. If we compute again the mesh we see that we have a finer mesh everywhere `[10:56]` ! So butterfly meshing is not only necessary for the hexahedral algorithm (otherwise it won't be able to generate the mesh due to the irregularities caused by the hole), but it is also great a way of locally refining the mesh using the several small and local parts of the geometries we created.
+
+## Exporting the mesh as a .MED file `[11:08]`
 
 Finally once we are done we can export the mesh by right clicking it and go into export med file and here you can save
-it wherever you want. I'm going to call it mesh one. Save.
+it wherever you want. It's going to be called it Mesh_1 for the next video. Save.
