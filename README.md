@@ -56,7 +56,7 @@ In this video, we focus on the powerful Python scripting capabilities within sal
 - Software: [code_aster](https://code-aster.org/spip.php?rubrique1), [salome_meca](https://www.salome-platform.org/?page_id=150)
 - In-depth breakdowns: [[Learn & Understand] Behind the scenes of salome_meca: scripting and files/Additionnal details.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Behind%20the%20scenes%20of%20salome_meca%20scripting%20and%20files/Additionnal%20details.md)
 
-### [Von Karman vortices Part 1 - Mesh & Geometry on Salome](TODO)
+### [Von Karman vortices Part 1 - Mesh & Geometry on Salome](https://www.youtube.com/watch?v=Sh26NeNrjn4)
 In this two-part tutorial, we showcase the powerful capabilities of Salome and Code_Saturne by demonstrating their performance on the well-documented Von Karman vortex phenomenon.
 
 In Part 1, we guide you step-by-step through the creation of geometry and mesh, highlighting key tips and tricks in the Geom and Mesh modules. You'll also learn how easy it is to get started with the Docker version of Code_Saturne, which offers impressive performance with minimal installation effort..
@@ -64,6 +64,14 @@ In Part 1, we guide you step-by-step through the creation of geometry and mesh, 
 - Software: [salome]([https://www.salome-platform.org/?page_id=150](https://www.salome-platform.org/))
 - In-depth breakdowns: [[Learn & Understand] Von Karman vortices Part 1 - Mesh & Geometry on Salome
 /Details on each step.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Von%20Karman%20vortices%20Part%201%20-%20Mesh%20%26%20Geometry%20on%20Salome/Details%20on%20each%20step.md)
+
+### [Von Karman vortices Part 2 - code_saturne study and post-process on paravis](https://www.youtube.com/watch?v=WT91OAqHOl4)
+
+In Part 2, we guide you step-by-step through the creation of a code_saturne study, showcasing some of the many possibilities the code offers to simulate flows. You'll also learn how to visualize the results on paravis and apply basic filters to understand better the datas. 
+
+- Software: [Code_saturne](https://www.code-saturne.org/cms/web/)
+- In-depth breakdowns: [[Learn & Understand] Von Karman vortices Part 2 - code_saturne study and post-process on paravis
+/Tutorial walkthrough.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Von%20Karman%20vortices%20Part%202%20-%20code_saturne%20study%20and%20post-process%20on%20paravis/Tutorial%20walkthrough.md)
   
 </details>
 
