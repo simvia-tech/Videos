@@ -76,9 +76,9 @@ We create a new hypothesis quadrangle parameter and select "quadrangle preferenc
 Move into 1D and we're going to impose a wire discretization algorithm with the hypothesis "number of segments" set to 30. This means that along each vertices of the mesh there will be 30 equidistants segments `[9:20]`.
 
 At this stage if you right click on the mesh you just created and go on compute you're going to see that you have a much
-finer mesh around the hole than elsewhere `[9:20]`. Second thing you'll notice is in 3D along the z-axis you have much more elements than what you want. We need only one element along Z.
+finer mesh around the hole than elsewhere `[9:44]`. Second thing you'll notice is in 3D along the z-axis you have much more elements than what you want. We need only one element along Z `[9:49]`.
 
-## Refining the mesh by adding sub-meshes
+## Refining the mesh by adding sub-meshes `[9:54-11:10]`
 
 We are now going to create sub meshes to solve these issues. Right click on the mesh you just created and go on create submesh `[9:50]`.
 Here we'll select the Z edges geometry group and impose a new 1D wire discretization algorithm. Go into hypothesis
