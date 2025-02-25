@@ -52,13 +52,15 @@ Before moving to the meshing algorithm we're going to create some geometric grou
 
 ## Creating the geometry groups with GEOM `[5:35-8:51]`
 
-### Groups
+### Surface groups
 
 Right click on the final geometry you just renamed flow, and select "create group". We are going
 to create several groups. Let's start with the inlet: this is where the water is going to come inside the mesh.
 Select a surface group `[5:38]` and call it "Inlet". Select the two faces on the side of the rectangle close to the hole `[5:49]`. You can select several faces at once by pressing shift and left click (and you can still rotate, zoom and span the interface using ctrl and the mouse buttons). Once you have selected the two faces composing the inlet, press add and click on apply to create the group without closing the create group pannel `[5:54]`. Similarly we are going to create an outlet: this is where the water is going to leave the mesh after it flowed. Name the new group "Outlet" and rotate the structure to select the two faces on the opposite side of the inlet, add them and press apply `[6:10]`.
 
 Now we're going to create the symmetry groups: as the geometry is quasi 2D we don't really care about the faces orthogonal to the z-axis so we're going to define them in Code_Saturne as symmetries. Call the group "Symmetry" and add all of the faces orthogonal to Z `[6:25-6:52]`. If everything was done as in the video you should get 20 faces. If you did any mistakes like in the video, you can right-click on the group and go in edit group. Then you can add the faces that you forgot to put `[6:58]`. Finally, we're going to create a last surface group that is going to be the walls of the flow. Select the sides (you should have six faces), and do not forget to add the obstacle `[7:16-7:38]`. 
+
+### Linear groups
 
 Lastly, we're going to create a 1D group made of all of the vertices that are along the z-axis. Let's name it Z vertices. This group is going to be useful when we'll be doing the mesh (cf later) `[7:40-7:56]`. Do likewise for the x-axis `[7:57-8:13]`.
  
