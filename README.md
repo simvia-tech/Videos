@@ -61,7 +61,7 @@ In this two-part tutorial, we showcase the powerful capabilities of Salome and C
 
 In Part 1, we guide you step-by-step through the creation of geometry and mesh, highlighting key tips and tricks in the Geom and Mesh modules. You'll also learn how easy it is to get started with the Docker version of Code_Saturne, which offers impressive performance with minimal installation effort..
 
-- Software: [salome]([https://www.salome-platform.org/?page_id=150](https://www.salome-platform.org/))
+- Software: [salome](https://www.salome-platform.org/)
 - In-depth breakdowns: [[Learn & Understand] Von Karman vortices Part 1 - Mesh & Geometry on Salome
 /Details on each step.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Von%20Karman%20vortices%20Part%201%20-%20Mesh%20%26%20Geometry%20on%20Salome/Details%20on%20each%20step.md)
 
