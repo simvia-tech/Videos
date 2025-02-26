@@ -57,7 +57,7 @@ If this command doesn't work, you may need to reboot WSL and try again the last 
 
 ## Pulling Code_Saturne image
 
-Simvia gives you access to pre-constructed images of EDF simulation codes. These are available on the company's DockerHub. For Code_Saturne, the link is as follows: [hub.docker.com/repository/docker/simvia/code_saturne/general](https://hub.docker.com/repository/docker/simvia/code_saturne/general).
+Simvia gives you access to pre-constructed images of EDF simulation codes. These are available on the company's DockerHub. For Code_Saturne, the link is as follows: [hub.docker.com/r/simvia/code_saturne](https://hub.docker.com/r/simvia/code_saturne).
 
 To download the image of the software, use the following command line:
 
