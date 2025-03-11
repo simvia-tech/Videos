@@ -1,31 +1,31 @@
 In this markdown, we give extra details about the video on the new Docker container Simvia made of Open_Telemac. 
-First log in your WSL machine. Once you're in it, you just have to type 
+First log in to your WSL machine. Once you're in it, you just have to type 
 
 ```docker pull simvia/opentelemac:v8p5r1```
 
-It will initiate a download. Once you are done pulling the image it should get visible in the list if you type Docker images. 
-Now, we're going to create an alias in your .bashrc in order to get easily inside the container. 
+It will initiate a download. Once you are done pulling the image it should be visible in the list if you type `Docker images`. 
+Now, we're going to create an alias in your .bashrc in order to easily get inside the container. 
 Use your favorite text editor and open your .bashrc. Make sure you are in the home directory to open it. Once you're in it 
-go in the bottom and you're going to create a new alias. Type 
+go to the bottom and you're going to create a new alias. Type 
 
 ```alias open_telemac='docker run -v $(pwd):/home/user -it simvia/opentelemac:v8p5r1'```
 
-Do not forget at the end of your alias to put a colum and then the name of the version of the image you're using (in our case it's V8P5R1).
-You can then save your bashrc. Close it and then in your terminal you can source your bashrc by typing in your home folder
+Do not forget at the end of your alias to put a colon and then the name of the version of the image you're using (in our case it's V8P5R1).
+You can then save your `.bashrc`. Close it and then in your terminal you can source your bashrc by typing in your home folder
 ```source .bashrc```
 
-The alias should now be understood by your terminal. So if you're just type open_telemac (or whatever alias you chose), you should be 
+The alias should now be understood by your terminal. So if you're just type `open_telemac` (or whatever alias you chose), you should be 
 able to get inside the container. 
 
 We are now going to run one of the many examples of the codes. Let us first create a new directory for running the example. In the video,
 we call it "ex_telemac".
 
 One crucial point to be aware is that all of the Telemac files can be found in the /opt/open_telemac folder `[2:25]`. Please note that 
-you don't have to configure any path, everything is already set up inside the docker container which mean if you just type `telemac2d.py` 
+you don't have to configure any path; everything is already set up inside the docker container which mean if you just type `telemac2d.py` 
 the command should already be understood. 
 
 
-Now in order to run an examples we are going to extract the case we are interested in in the /opt folder
+Now in order to run an examples we are going to extract the case we are interested from the /opt folder
 to our local directory. Indeed, we don't have the right to directly edit the examples in the /opt folder: we need to copy them. To do so we
 are going to use the following command: 
 ```cp -r /opt/open_telemac/examples/telemac3d/Cooper .```
@@ -44,6 +44,6 @@ here. It is on a solid color but you can change the representation `[5:13]` to s
 at the water depth. The water is deeper in the middle of the square. There is a button to start and play the animation `[5:27]`.
 Here, it is composed of only two time iterations: this can be modified in the .cas file of the example. The water depth is time independant
 in this simulation but if you're displaying the velocity profile you can see with time a nice velocity patterns appearing. It may not appear
-correctly because of the color map so you need to click on the automatic rescale button to visualize datas properly `[5:53]`. This velocity
+correctly because of the color map so you need to click on the automatic rescale button to visualize the data properly `[5:53]`. This velocity
 pattern comes from the natural buoyancy effects due to a tracer with a different density than the water you're simulating. You can find 
 references in the documentation of the telemac3D file for the Cooper example.
