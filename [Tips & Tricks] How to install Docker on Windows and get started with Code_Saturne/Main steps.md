@@ -83,7 +83,12 @@ Few information about this command :
 
 Once it's done you can relaunch your terminal. If you try to do the completion action, the command `code_saturne`should be considered now.
 
-> *Note: To run GUI applications in Docker on Wayland, you need to manage access to either Xwayland (for X apps) or the Wayland compositor. For X apps, use `xhost` to allow access (e.g., `xhost +SI:localuser:$(id -un)`) and specify the user with `--user=$(id -u):$(id -g)` in the Docker command. For Wayland apps, share the Wayland socket (`WAYLAND_DISPLAY`), set `XDG_RUNTIME_DIR`, and run the application with the appropriate flags. Tools like `x11docker` simplify this process and preserve container isolation.*
+> [!NOTE]
+> It's better to launch the docker container in a dedicated folder rather than from the `/home/user` folder. That way, the container will not interact with all of the files inside the /home/user folder.
+
+
+> [!NOTE]
+> To run GUI applications in Docker on Wayland, you need to manage access to either Xwayland (for X apps) or the Wayland compositor. For X apps, use `xhost` to allow access (e.g., `xhost +SI:localuser:$(id -un)`) and specify the user with `--user=$(id -u):$(id -g)` in the Docker command. For Wayland apps, share the Wayland socket (`WAYLAND_DISPLAY`), set `XDG_RUNTIME_DIR`, and run the application with the appropriate flags. Tools like `x11docker` simplify this process and preserve container isolation.*
 
 ## Launch you first commands
 
