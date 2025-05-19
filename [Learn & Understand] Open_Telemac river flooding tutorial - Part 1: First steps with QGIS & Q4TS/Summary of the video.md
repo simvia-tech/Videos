@@ -1,5 +1,27 @@
 This file is a written summary with extra details of the first part of the Open_Telemac river flooding tutorial. The aim of this tutorial is to provide a tutorial video on how to prepare, run and analyze a hydraulic study using [Q4TS](https://plugins.qgis.org/plugins/q4ts/) and [Open_Telemac](https://www.opentelemac.com/). The focus of this first video is exclusively on Q4TS and QGIS.
 
+# Downloading the data
+
+If you'd like to download the files related to this video tutorial — without cloning the entire repository — you can use Git's sparse checkout feature together with Git LFS.
+This method fetches just the folder you need, while still correctly downloading all LFS-managed files.
+
+### Requirements:
+
+- Git version 2.25 or higher
+- Git LFS installed
+
+Then simply run the following command to only download the data files used in the video.
+
+```
+git clone --filter=blob:none --no-checkout https://github.com/simvia-tech/Videos.git
+cd Videos
+git sparse-checkout init --cone
+git sparse-checkout set --skip-checks "[Learn & Understand] Open_Telemac river flooding tutorial - Part 1: First steps with QGIS & Q4TS"
+git checkout main
+git lfs pull
+```
+
+
 # Loading a reference map (.xyz)
 
 After clicking on the new study button on QGIS `0:21`, the first thing you're likely to need is a map that's going to be used as a reference. In this first video we're going to use [OpenStreetMap](https://www.openstreetmap.org/#map=6/46.45/2.21). It can be found in the browser in XYZ tiles `0:23`, as it is by default available in QGIS.
