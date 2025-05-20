@@ -1,5 +1,21 @@
 This file is a written summary with extra details of the first part of the Open_Telemac river flooding tutorial. The aim of this tutorial is to provide a tutorial video on how to prepare, run and analyze a hydraulic study using [Q4TS](https://plugins.qgis.org/plugins/q4ts/) and [Open_Telemac](https://www.opentelemac.com/). The focus of this first video is exclusively on Q4TS and QGIS.
 
+# Aliases in the video
+
+The aliases used in the video are the following:
+
+running QGIS:
+
+```
+alias QGIS='docker run --rm -it --env QT_X11_NO_MITSHM=1  --env QT_QPA_PLATFORM=xcb --env DISPLAY=$DISPLAY --env XAUTHORITY=$XAUTHORITY --volume /tmp/.X11-unix:/tmp/.X11-unix --volume $XAUTHORITY:$XAUTHORITY -v /home/simvia:/home/user/data --net=host opentelemac:v8p5r1_qgis_parallel bash -c "source /opt/open_telemac/configs/pysource-simvia.sh && qgis"'
+```
+
+opening a bash inside the open_telemac container (will be used in part 2 & 3):
+
+```
+alias open_telemac='docker run --rm -it --env QT_X11_NO_MITSHM=1  --env QT_QPA_PLATFORM=xcb --env DISPLAY=$DISPLAY --env XAUTHORITY=$XAUTHORITY --volume /tmp/.X11-unix:/tmp/.X11-unix --volume $XAUTHORITY:$XAUTHORITY -v /home/simvia:/home/user/data --net=host opentelemac:v8p5r1_qgis_parallel'
+```
+
 # Downloading the data
 
 If you'd like to download the files related to this video tutorial — without cloning the entire repository — you can use Git's sparse checkout feature together with Git LFS.
