@@ -1,0 +1,48 @@
+/----------------------------------------------------/
+/     FILES
+/----------------------------------------------------/
+
+GEOMETRY FILE                      = 'geo_yvette.slf'
+BOUNDARY CONDITIONS FILE           = 'create_boundary.cli'
+RESULTS FILE                       = 'r2d_yvette.slf'
+/FORTRAN FILE                       ='...'
+LIQUID BOUNDARIES FILE               = 'flooding_profile.csv'
+
+/----------------------------------------------------/
+/     TIME PARAMETERS AND IO
+/----------------------------------------------------/
+
+TIME STEP                          = 5
+DURATION                           = 100000
+VARIABLES FOR GRAPHIC PRINTOUTS     = 'U,V,B,W,H,F,Q,S'
+GRAPHIC PRINTOUT PERIOD            = 200
+LISTING FOR PRINTOUT PERIOD        = 200
+
+/----------------------------------------------------/
+/     INITIAL AND BOUNDARY CONDITIONS
+/----------------------------------------------------/
+
+COMPUTATION CONTINUED              = YES
+PREVIOUS COMPUTATION FILE          = r2d_yvette.slf
+INITIAL TIME SET TO ZERO           = YES
+/PRESCRIBED FLOWRATES               = 0. ; 5.
+/PRESCRIBED ELEVATIONS              = 60.5 ; 0
+VELOCITY PROFILES                  = 4 ; 4
+ 
+/----------------------------------------------------/
+/     PHYSICAL PARAMETERS
+/----------------------------------------------------/
+
+LAW OF BOTTOM FRICTION             = 3
+FRICTION COEFFICIENT               =35
+
+/----------------------------------------------------/
+/     NUMERICAL PARAMETERS
+/----------------------------------------------------/
+
+SCHEME FOR ADVECTION OF VELOCITIES      = 1
+SOLVER                                  = 1
+SOLVER ACCURACY                         = 1.E-4
+MASS-BALANCE                            = YES
+
+/----------------------------------------------------/
