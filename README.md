@@ -29,7 +29,7 @@ Learn how to open and run a test case of code_aster within salome_meca. There ar
 - Software: [code_aster](https://code-aster.org/spip.php?rubrique1), [salome_meca](https://www.salome-platform.org/?page_id=150)
 - In-depth breakdowns: [[Tips & Tricks] Run a test case with Salome meca/Additionnal details on the video.md](https://github.com/simvia-tech/Videos/blob/main/%5BTips%20%26%20Tricks%5D%20Run%20a%20test%20case%20with%20Salome%20meca/Additionnal%20details%20on%20the%20video.md)
 
-### [How to install Docker on Windows and get started with code_saturne](TODO)
+### [How to install Docker on Windows and get started with code_saturne](https://www.youtube.com/watch?v=toaXeW8Wt94)
 In this tutorial, we walk you through the process of installing Docker on your Windows computer and guide you on how to download the
 Code_Saturne image directly from our DockerHub. You'll also learn the essential first commands to run Code_Saturne smoothly and get
 started with your simulations. Whether you're a beginner or looking to streamline your setup, this video makes the process quick and easy.
@@ -72,7 +72,18 @@ In Part 2, we guide you step-by-step through the creation of a code_saturne stud
 - Software: [Code_saturne](https://www.code-saturne.org/cms/web/)
 - In-depth breakdowns: [[Learn & Understand] Von Karman vortices Part 2 - code_saturne study and post-process on paravis
 /Tutorial walkthrough.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Von%20Karman%20vortices%20Part%202%20-%20code_saturne%20study%20and%20post-process%20on%20paravis/Tutorial%20walkthrough.md)
-  
+
+### [Open_Telemac river flooding tutorial - Part 1: First steps with QGIS & Q4TS](https://youtu.be/NFo-HavVz70)
+
+This video is the first part of a tutorial on how to simulate river flooding using Open_Telemac.
+In this initial video, we focus on creating the model and preparing the data. Using the Q4TS plugin in QGIS, we create a mesh for a domain that we draw directly on the map. We use a French river as an example, but the steps described here can be applied to any river in the world, provided topographic data is available.
+
+Once the mesh is generated, we project the topographic data onto it (specifically, the "bottom" variable). This forms the foundation of the data required for the Open_Telemac model to run a flood simulation.
+
+- Softwares: [Open_Telemac](http://www.opentelemac.com/), [QGIS](https://www.qgis.org/), [Q4TS](https://plugins.qgis.org/plugins/q4ts/)
+- Summary with extra details: [[Learn & Understand] Open_Telemac river flooding tutorial - Part 1: First steps with QGIS & Q4TS/Summary of the video.md](https://github.com/simvia-tech/Videos/blob/main/%5BLearn%20%26%20Understand%5D%20Open_Telemac%20river%20flooding%20tutorial%20-%20Part%201%3A%20First%20steps%20with%20QGIS%20%26%20Q4TS/Summary%20of%20the%20video.md)
+
+
 </details>
 
 > *Note: Each video will be updated with additional content and resources here as we continue building this repository.*
