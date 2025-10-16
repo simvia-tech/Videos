@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><Code_Saturne_GUI case="Case1" solver_version="8.3" study="code_saturne" version="2.0">
+<?xml version="1.0" encoding="utf-8"?><Code_Saturne_GUI case="Case1" solver_version="9.0" study="code_saturne" version="2.0">
   <additional_scalars>
     <users/>
   </additional_scalars>
