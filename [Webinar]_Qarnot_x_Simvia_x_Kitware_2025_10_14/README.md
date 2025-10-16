@@ -1,4 +1,17 @@
-# Running the Simulation on Qarnot Platform
+# Webinar Qarnot x Kitware x Simvia : Break down the HPC barriers - Making numerical simulation a commodity
+
+## Context
+
+On October 14, Simvia teamed up with Kitware and Qarnot for a hands-on webinar showcasing how open-source tools and cloud-based workflows can overcome traditional HPC limitations—without sacrificing performance.
+
+During the session, participants saw:
+- A live demo of a real CFD case using **code_saturne**, the open-source tool developed by EDF R&D, deployed in just a few clicks.
+- Interactive post-processing with ParaView through a virtual desktop interface (VDI).
+- Immediate access to the test case, enabling attendees to run it on their own.
+
+The provided markdown from the session includes all the technical steps needed to launch the same computations and replicate the full workflow shown during the demo.
+
+## Running the Simulation on Qarnot Platform
 
 This guide explains how to launch the **Blade** simulation on [Qarnot](https://qarnot.com), using either the **web platform** or the **Python SDK**.
 
