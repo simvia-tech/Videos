@@ -13,34 +13,42 @@ The provided markdown from the session includes all the technical steps needed t
 
 ## Running the Simulation on Qarnot Platform
 
-This guide explains how to launch the **Blade** simulation on [Qarnot](https://qarnot.com), using either the **web platform** or the **Python SDK**.
+This guide explains how to launch the **Blade** simulation on [Qarnot](https://app.qarnot.com), using either the **web platform** or the **Python SDK**.
 
 ---
 
 ## 🧭 Approach 1 — Using the Qarnot Web Platform
 
-1. **Log in** to your [Qarnot account](https://console.qarnot.com/).
+1. **Log in** to your [Qarnot account](https://app.qarnot.com/).
 
 2. **Create a new storage bucket**  
    - Go to the **Storage** section.  
-   - Click **Create bucket**, and name it (for example `my-bucket`).
+   - From the side menu on the left, open the folders explorer and click **Create folder**, and name it (for example `my-folder`).
 
 3. **Upload the Blade case folder**  
-   - Upload the entire `Blade/` directory into your bucket.  
+   - Upload the entire `Blade/` directory into your folder.  
+   - Make sure the directory structure is preserved.
+
+3. **Upload the Blade case folder**  
+   - Upload the entire `Blade/` directory into your folder.  
    - Make sure the directory structure is preserved.
 
 4. **Create and configure your HPC task**
-   - Go to the **Compute** section.  
-   - Click **New Task**, and select the appropriate **Qarnot HPC image** (e.g., your custom simulation image).  
-   - In the configuration, set the following environment variable:
+   - Go to the **My simulations** section.  
+   - Click **Start a Simulation**, and select **Code_saturne**.  
+   - In the next configuration page, select your folder `my-folder`and set the following the following input directory name:
      ```
-     CS_CASE_NAME=Blade
+     Input_directory_name=Blade
      ```
-   - Select your bucket as input/output storage.  
+   NB: if you upload the blade directory from the form submission, its contente will be uploaded at the root of your folder (without the blade directory). In that case, change the input directory name to :  
+     ```
+     Input_directory_name=./
+     ``` 
+   - Select your pricing plan and hardware. 
 
 5. **Launch the task**
-   - Click **Run**.  
-   - Once finished, your results will be available in the same bucket.
+   - Click **Start**.  
+   - Once finished, your results will be available in the same folder.
 
 ---
 
