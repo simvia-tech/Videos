@@ -101,7 +101,7 @@ code_saturne
 To create a folder and a case related needed to start with Code_Saturne, use the following command:
 
 ```bash
-code_saturne -s study1 -c case1
+code_saturne create -s study1 -c case1
 ```
 
 Finally, to launch the graphical interface of Code_Saturne on our newly created case, just type:
