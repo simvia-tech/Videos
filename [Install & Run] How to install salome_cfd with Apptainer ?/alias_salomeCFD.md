@@ -1,5 +1,6 @@
 # Alias to run Salome_CFD for Singularity or Apptainer
 
+```bash
 if [ -z "$SINGULARITY_CONTAINER" ] && [ -z "$APPTAINER_CONTAINER" ]; then
 salome_cfd() {
     local sif="$HOME/path/to/SALOME_CFD_2026.sif"    # <-- path to the downloaded .sif
@@ -32,3 +33,4 @@ salome_cfd() {
     singularity exec "${opts[@]}" "$sif" "$@"
 }
 fi
+```
